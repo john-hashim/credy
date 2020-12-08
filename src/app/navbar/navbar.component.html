@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+     <p class="c">Credy</p>
+  
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item" routerLinkActive="active" *ngIf="!data.logedIn">
+          <a class="nav-link" routerLink='/login'>Login</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" *ngIf="data.logedIn">
+          <a class="nav-link" routerLink='movies'>Movies</a>
+        </li>
+        <li class="nav-item" *ngIf="data.logedIn">
+          <a class="nav-link" (click)="logOut()" style="cursor: pointer;">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>

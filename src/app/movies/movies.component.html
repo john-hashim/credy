@@ -1,0 +1,54 @@
+<!-- <div *ngIf="!toggleLoading">
+  <img src="../../assets/loading.gif" alt="">
+</div> -->
+<div class="directions" >
+    <p class="previous display-none" (click)="previousList()"> <span> <-- </span> Previous Page </p>
+    <p class="next " (click)="nextList()">Next Page <span>  --> </span></p>
+    <p class="error display-none" (click)="handleError()">An Error occur while Loading, click <span> RELOAD </span>to continue <br>
+      (may be it will take more than two clicks & After 2nd click the whole page will reload )</p>
+</div>
+
+<div class="wrapper">
+    <div class="card" *ngFor="let movie of Movies" data-toggle="modal" data-target="#exampleModalCenter" (click)="selectMovie(movie)">
+         <div class="content">
+                <div class="round">
+                  <img src="https://ui-avatars.com/api/?name={{movie.title}}&rounded=true"  alt="">
+                </div>
+                <div class="description">
+                    {{movie.description | slice : 0:100}}
+                </div>
+         </div>
+         <div class="title">{{movie.title| uppercase }}</div>
+         <div class="genres">{{movie.genres}}</div>
+    </div>
+</div>
+
+
+<div class="modal fade custom" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title title" id="exampleModalLongTitle">{{selectedMovie.title}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="genres">
+                {{selectedMovie.genres}}
+            </div>
+            <div class="description">
+                {{selectedMovie.description}}
+            </div>
+            <div class="imdb">
+                IMDB-8.1/10
+            </div>
+            <div class="publish">
+                <p>Amazon Orginals | Watch Now</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  

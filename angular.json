@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "credy"
+  "defaultProject": "credy",
+  "cli": {
+    "analytics": "f4b9b1ed-fd60-4fe5-a294-479f64c2f92b"
+  }
 }

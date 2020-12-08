@@ -1,0 +1,83 @@
+p{
+    margin: 0;
+}
+$color_blue:#e8f9fd;
+$color_orange:#ff1e00;
+$color_green:#59ce8f;
+.wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .adv{
+        margin-top: 15px;
+        height: 41vh;
+        width: 100%;
+        background-color: $color_blue;
+        display: flex;
+        .text{
+            div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                p{
+                    font-size:2vw; 
+                    font-weight: 700;
+                    span{
+                        color: $color_green;
+                    }
+                }
+                .numbers{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items:center;
+                    justify-content: space-around;
+                    div{
+                        font-size: 55px;
+                        font-weight: 700;
+                        color: $color_orange;
+                        line-height: 1.1;
+                        span{
+                            font-size: 25px;
+                            color: black;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+        .images{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .carousel{
+                height: 100%;
+                width: 90%;
+                box-shadow: 0px 1px 2px white;
+            }
+        }
+    }
+    form{
+        width:100%;
+        margin-top: 10px;
+        border: none !important;
+        input{
+            margin: 0;
+            width: 100% !important;
+            height:3em ;
+        }
+        .btn{
+            background: $color_green;
+        }
+    }
+}
+
+input:active,input:focus
+{
+    border: none;
+    outline:none !important;
+    -webkit-appearance:none;
+    box-shadow: 0px 3px 5px rgb(199, 192, 192) !important;
+}
+
